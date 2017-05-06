@@ -29,13 +29,13 @@ public class CleverRobot extends IRobotAdapter {
 
 	private void setup() throws Exception {
 		driveDirect(100,100);
+		Thread.sleep(1000);
+		driveDirect(100,0);
+		
 	}
 	
 	private boolean loop() throws Exception{
-		System.out.println("LEFT SONAR: " + sonar.readSonar("left"));
-		Thread.sleep(1000);
-		System.out.println("RIGHT SONAR: " + sonar.readSonar("right"));
-		System.out.println("CENTER SONAR: " + sonar.readSonar("center"));
+	
 		
 		return true;
 	}
